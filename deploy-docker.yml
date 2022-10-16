@@ -21,7 +21,7 @@
         state: present
     - name: Start the container
       docker_container:
-        name: hariapp
+        name: hellojava
         image: "libinmathew/hello-world-java:{{DOCKER_TAG}}"
         state: started
         published_ports:
