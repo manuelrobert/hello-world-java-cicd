@@ -1,4 +1,3 @@
-@Library("doclibs") _
 
 pipeline {
     agent any
@@ -31,6 +30,11 @@ pipeline {
                     sh "podman login -u libinmathew -p ${dockhubpwd}"
                 }
                sh "podman push libinmathew/hello-world-java:${DOCKER_TAG}"
+            }
+        }
+          stage('podman Deploy') {
+            steps{
+               ansiblePlaybook credentialsId: 'jenkins-server', disableHostKeyChecking: true, extras: "-e DOCKER_TAG=${DOCKER_TAG}", installation: 'ansible', inventory: 'dev.inv', playbook: 'deploy-docker.yml'
             }
         }
     }
