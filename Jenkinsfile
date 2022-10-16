@@ -32,9 +32,10 @@ pipeline {
                sh "podman push libinmathew/hello-world-java:${DOCKER_TAG}"
             }
         }
-          stage('podman Deploy') {
+        
+        stage('Podman Deploy'){
             steps{
-               ansiblePlaybook credentialsId: 'jenkins-server', disableHostKeyChecking: true, extras: "-e DOCKER_TAG=${DOCKER_TAG}", installation: 'ansible', inventory: 'dev.inv', playbook: 'deploy-docker.yml'
+              ansiblePlaybook credentialsId: 'jenkins-server', disableHostKeyChecking: true, extras: "-e DOCKER_TAG=${DOCKER_TAG}", installation: 'ansible', inventory: 'dev.inv', playbook: 'deploy-docker.yml'
             }
         }
     }
