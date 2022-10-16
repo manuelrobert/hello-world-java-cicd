@@ -55,7 +55,7 @@ public class CalculatorTest extends TestCase {
 	
 	public void testAddNew() {
 		//Assert.assertEquals(cal.add(10, 20), 30);
-		string temp = "hello";
+		String temp = "hello";
 		System.out.println(temp);
 	}
 }
