@@ -1,6 +1,7 @@
 ---
-- hosts: 172.31.10.42
+- hosts: 35.78.139.198
   become: True
+  become_user: root
   tasks:
     - name: Install python pip
       yum:
@@ -22,7 +23,7 @@
     - name: Start the container
       docker_container:
         name: hellojava
-        image: "libinmathew/hello-world-java:{{DOCKER_TAG}}"
+        image: "libinmathew/hello-world-java:536fd14"
         state: started
         published_ports:
           - 0.0.0.0:8080:8080
