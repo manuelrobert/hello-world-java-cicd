@@ -1,5 +1,5 @@
 ---
-- hosts: 13.231.102.111
+- hosts: 35.78.139.198
   become: True
   become_user: root
   tasks:
