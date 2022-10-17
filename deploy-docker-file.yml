@@ -1,5 +1,5 @@
 ---
-- hosts: dev
+- hosts: 172.31.10.42
   become: True
   tasks:
     - name: Install python pip
@@ -25,4 +25,4 @@
         image: "libinmathew/hello-world-java:{{DOCKER_TAG}}"
         state: started
         published_ports:
-          - 0.0.0.0:8082:8082
+          - 0.0.0.0:8080:8080

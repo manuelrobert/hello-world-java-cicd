@@ -1,2 +1,5 @@
 [dev]
 172.31.10.42 ansible_user=ubuntu
+35.78.139.198 ansible_user=ubuntu
+172.31.10.42 ansible_user=root
+172.31.10.42 ansible_user=roots
