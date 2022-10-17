@@ -22,7 +22,7 @@
         state: present
     - name: Start the container
       docker_container:
-        name: hellojava
+        name: hellojavas
         image: "libinmathew/hello-world-java:536fd14"
         state: started
         published_ports:
