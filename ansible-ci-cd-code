@@ -1,0 +1,1 @@
+ansible-playbook deploy-docker-file.yml -i dev.inv --private-key ssh494606775917197907.key -u ec2-user
