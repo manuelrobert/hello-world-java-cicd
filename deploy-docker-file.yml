@@ -23,7 +23,7 @@
     - name: Start the container
       docker_container:
         name: hellojavas
-        image: "libinmathew/hello-world-java:536fd14"
+        image: "libinmathew/hello-world-java:{{DOCKER_TAG}}"
         state: started
         published_ports:
           - 0.0.0.0:8081:8080
