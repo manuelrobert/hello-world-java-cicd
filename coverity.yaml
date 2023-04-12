@@ -1,0 +1,6 @@
+analyze:
+  location: local
+commit:
+  connect:
+    stream: hello-world-java-cicd
+    url: http://43.207.6.170:8080
