@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: "hello-world-java-cicd"
   annotations:
-    jenkins.io/job-full-name: "/job/testgitorg"
+    jenkins.io/job-full-name: "/job/testgitorg/job"
 spec:
   type: service
   owner: user:guest
