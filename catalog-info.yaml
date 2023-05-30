@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "hello-world-java-cicd"
+  annotations:
+    jenkins.io/job-full-name: "/job/testgitorg"
+spec:
+  type: service
+  owner: user:guest
+  lifecycle: experimental
